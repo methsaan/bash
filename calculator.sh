@@ -1,4 +1,3 @@
-clear
 echo "Enter operator"
 read op
 echo "Enter first number"
