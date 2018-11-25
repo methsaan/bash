@@ -4,13 +4,15 @@ set -o pipefail
 set -o nounset
 set -o errexit
 
-echo "Enter of number of times: "
-read numOfTimes
-number=5
+echo -n -e "Enter length: "
+read len
+number=1
 number2=1
-for x in `seq 1 $numOfTimes`
+for i in `seq 1 $len`
 do
+	number2=$(( number2+number2 ))
+	number=$(( number+number2 ))
+	echo $number2
 	echo $number
-	number2=$(( $number ))
-	number=$(( $number+$number2 ))
+	echo ""
 done
