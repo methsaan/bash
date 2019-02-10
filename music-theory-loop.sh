@@ -2,6 +2,7 @@
 
 while [ true ] ; do
     clear
-    java theory
+    javac ../java/usefulprograms/theory.java
+    java ../java/usefulprograms/theory
     sleep 10
 done
