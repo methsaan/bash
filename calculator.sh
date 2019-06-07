@@ -20,4 +20,8 @@ if [ "$op" == "div" ]
 then
 	let answer=$f/$s
 fi
+if [ "$op" == "mod" ]
+then
+	let answer=$f%$s
+fi
 echo "Answer: $answer"
