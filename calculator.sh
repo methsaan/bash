@@ -18,10 +18,11 @@ then
 fi
 if [ "$op" == "div" ]
 then
-	let answer=$f/$s
+	let answerTemp="($f * 1000000000) / $s"
+	answer="${answerTemp:0:($(expr ${#var} - 9))}.${answerTemp:(-9)}"
 fi
 if [ "$op" == "mod" ]
 then
 	let answer=$f%$s
 fi
-echo "Answer: $answer"
+printf 'Answer: %s\n' "$answer"
