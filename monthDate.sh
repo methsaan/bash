@@ -6,7 +6,7 @@ month=date[0]
 day=date[1]
 
 
-#read -p "Please enter location names separated by space: " location_names
+#read -p "Enter location names separated by space: " location_names
 
 #for location in $location_names
 #do
