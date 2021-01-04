@@ -1,14 +1,13 @@
-echo "Enter year"
-read month
-echo "Enter date"
-read date
-month=date[0]
-day=date[1]
+#! /bin/bash
 
+set -o pipefail
+set -o nounset
+set -o errexit
 
-#read -p "Enter location names separated by space: " location_names
+read -p "Enter date(y/m/d): " dateInput
+IFS='/'
+read -a dateArr <<<"$dateArr"
 
-#for location in $location_names
-#do
-#echo $location
-#done
+echo "Year: ${dateArr[0]}"
+echo "Month: ${dateArr[1]}"
+echo "Day: ${dateArr[2]}"
