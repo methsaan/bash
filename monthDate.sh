@@ -4,10 +4,10 @@ set -o pipefail
 set -o nounset
 set -o errexit
 
-read -p "Enter date(y/m/d): " dateInput
-IFS='/'
-read -a dateArr <<<"$dateArr"
+months=(Zero Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
+echo -n "Enter date (y/m/d): "
+IFS='/' read -ra dateArr
 
-echo "Year: ${dateArr[0]}"
-echo "Month: ${dateArr[1]}"
-echo "Day: ${dateArr[2]}"
+dateFormat="${months[${dateArr[1]#0}]} ${dateArr[2]} ${dateArr[0]}"
+echo "$dateFormat"
+date --date "${dateFormat}" +%A
